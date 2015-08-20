@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\controllers;
+namespace lo\modules\playground\modules\admin\controllers;;
 
 use Yii;
 use yii\helpers\VarDumper;

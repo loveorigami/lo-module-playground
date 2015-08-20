@@ -23,7 +23,7 @@
         "source": "https://bitbucket.org/loveorigami/lo-module-playground"
     },
     "require": {
-        "yiisoft/yii2": "~2",
+        "yiisoft/yii2": "~2"
     },
     "autoload": {
         "psr-4": {

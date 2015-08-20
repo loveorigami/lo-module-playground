@@ -1,5 +1,5 @@
 <?php
-namespace lo\modules\core\models;
+namespace lo\modules\playground\models;
 
 use lo\core\db\TActiveRecord;
 use lo\core\rbac\IPermission;
@@ -11,7 +11,7 @@ use Yii;
  * @package lo\modules\core\models
  */
 
-class Form extends TActiveRecord
+class Formplay extends TActiveRecord
 
 {
 
@@ -27,6 +27,6 @@ class Form extends TActiveRecord
      */
     public function metaClass()
     {
-        return FormMeta::className();
+        return FormplayMeta::className();
     }
 }

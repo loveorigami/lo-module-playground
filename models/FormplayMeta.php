@@ -1,6 +1,6 @@
 <?php
 
-namespace lo\modules\core\models;
+namespace lo\modules\playground\models;
 
 use lo\core\db\MetaFields;
 use Yii;
@@ -10,7 +10,7 @@ use Yii;
  * Мета описание модели меню
  * @package lo\modules\core\models
  */
-class FormMeta extends MetaFields
+class FormplayMeta extends MetaFields
 {
 
     /**

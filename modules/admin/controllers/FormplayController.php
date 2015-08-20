@@ -2,7 +2,7 @@
 
 namespace lo\modules\playground\modules\admin\controllers;
 
-use lo\modules\playground\models\Form;
+use lo\modules\playground\models\Formplay;
 use lo\core\actions\crud;
 use Yii;
 use yii\web\Controller;
@@ -11,7 +11,7 @@ use yii\filters\VerbFilter;
 /**
  * PermissionController implements the CRUD actions for Permission model.
  */
-class FormsController extends Controller
+class FormplayController extends Controller
 {
     /**
      * Поведения
@@ -40,7 +40,7 @@ class FormsController extends Controller
     public function actions()
     {
 
-        $class = Form::className();
+        $class = Formplay::className();
 
         return [
 

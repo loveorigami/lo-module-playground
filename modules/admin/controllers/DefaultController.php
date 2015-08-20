@@ -40,11 +40,10 @@ class DefaultController extends Controller
     {
         $post = \Yii::$app->request->post('dataq');
 
-       // header('Content-type: application/json');
+        // header('Content-type: application/json');
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-        $res['id'] = $post['id'];
-        $res['mes'] = $post['id'].' - It is ok!';
-
+        $item['res'] = $post['id'].' - It is ok!';
+        $res = print_r($item, true);
         echo json_encode($res);
     }
 }

@@ -16,6 +16,24 @@ class FormplayMeta extends MetaFields
     /**
      * @inheritdoc
      */
+    const SEO_TAB = "seo";
+    const TEXT_TAB = "text";
+    const CONFIG_TAB = "config";
+
+    /**
+     * @inheritdoc
+     */
+
+    public function tabs()
+    {
+        $tabs = parent::tabs();
+
+        $tabs[self::SEO_TAB] = Yii::t('core', "SEO");
+        $tabs[self::TEXT_TAB] = Yii::t('core', "Text");
+        $tabs[self::CONFIG_TAB] = Yii::t('core', "Config");
+
+        return $tabs;
+    }
 
     protected function config()
     {
@@ -28,6 +46,7 @@ class FormplayMeta extends MetaFields
                 ],
                 "params" => [$this->owner, "parent_id"]
             ],
+
             "author_id" => [
                 'definition' => [
                     "showInGrid" => false,
@@ -37,6 +56,7 @@ class FormplayMeta extends MetaFields
             "created_at" => [
                 'definition' => [
                     "showInGrid" => false,
+                    "showInForm" => false,
                  ]
             ],
             "name" => [
@@ -70,6 +90,7 @@ class FormplayMeta extends MetaFields
                 ],
                 "params" => [$this->owner, "icon"]
             ],
+
             "onmain" => [
                 "definition" => [
                     "class" => \lo\core\db\fields\CheckBoxField::className(),
@@ -81,6 +102,83 @@ class FormplayMeta extends MetaFields
                 ],
                 "params" => [$this->owner, "onmain"]
             ],
+
+            "title" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\TextField::className(),
+                    "title" => Yii::t('common', 'title'),
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "tab" => self::SEO_TAB,
+                ],
+                "params" => [$this->owner, "title"]
+            ],
+
+            "text1" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\TextField::className(),
+                    "title" => 'TextField',
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "tab" => self::TEXT_TAB,
+                ],
+                "params" => [$this->owner, "text1"]
+            ],
+
+            "text2" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\TextAreaField::className(),
+                    "title" => 'TextAreaField',
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "tab" => self::TEXT_TAB,
+                ],
+                "params" => [$this->owner, "text2"]
+            ],
+
+            "text3" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\HtmlField::className(),
+                    "inputClass" =>[
+                        'class'=>'lo\core\inputs\HtmlInput',
+                        "fileManagerController"=>['elfinder', 'path' => 'page'],
+                    ],
+                    "title" => 'HtmlField',
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "widgetOptions"=>[
+                        'editorOptions'=>[
+                            'preset' => 'basic',
+                        ]
+                    ],
+                    "tab" => self::TEXT_TAB,
+                ],
+                "params" => [$this->owner, "text3"]
+            ],
+
+
+
+
+            "text7" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\HtmlField::className(),
+                    "inputClass" =>[
+                        'class'=>'lo\core\inputs\HtmlInput',
+                        "fileManagerController"=>['elfinder', 'path' => 'page'],
+                    ],
+                    "title" => 'HtmlField',
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "widgetOptions"=>[
+                        'editorOptions'=>[
+                            'preset' => 'standard',
+                        ]
+                    ],
+                    "tab" => self::CONFIG_TAB,
+                ],
+                "params" => [$this->owner, "text7"]
+            ],
+
         ];
     }
 

@@ -15,7 +15,7 @@ class Formplay extends TActiveRecord
 
 {
 
-    public $tplDir = '@lo/modules/playground/modules/admin/views/forms/tpl/';
+    public $tplDir = '@lo/modules/playground/modules/admin/views/formplay/tpl/';
 
     public static function tableName()
     {

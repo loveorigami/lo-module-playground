@@ -24,3 +24,16 @@ $ php yii migrate/up --migrationPath=@vendor/loveorigami/lo-module-playground/mi
 ### 3. Что входит
 
 * Form - набор полей для формы. Настройки в модели FormMeta
+
+### Список полей
+
+* + CheckBoxField
+* HasOneField
+* HtmlField
+* ListField
+* + ParentListField
+* PkField
+* + SlugField
+* + TextAreaField
+* TextField
+* TimestampField

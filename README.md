@@ -39,6 +39,7 @@ $ php yii migrate/up --migrationPath=@vendor/loveorigami/lo-module-playground/mi
 * TimestampField
 
 ### Выборки
+подробнее тут http://www.it-wiki.org.ua/doku.php/yii2:activerecord
 ```php
 
 namespace common\models;

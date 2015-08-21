@@ -37,3 +37,35 @@ $ php yii migrate/up --migrationPath=@vendor/loveorigami/lo-module-playground/mi
 * + TextAreaField
 * TextField
 * TimestampField
+
+### Выборки
+```php
+
+namespace common\models;
+
+use Yii;
+
+class Content extends \yii\db\ActiveRecord
+{
+...
+    public function getAuthor() {
+        return $this->hasOne(User::className(), ['id' => 'author_id']);
+    }
+...
+}
+
+Если вам нужен автор, то надо так:
+
+$data = Content::find()->one()
+    ->getAuthor()->one();
+
+
+
+Если вам нужны все записи вместе с авторами, то так:
+
+$data = Content::find()
+    ->with('author')
+    ->all();
+
+
+```

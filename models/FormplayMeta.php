@@ -41,7 +41,7 @@ class FormplayMeta extends MetaFields
             "parent_id" => [
                 "definition" => [
                     "class" => \lo\core\db\fields\ParentListField::className(),
-                    "title" => Yii::t('main/app', 'Parent'),
+                    "title" => Yii::t('core', 'Parent'),
                     "data" => [$this->owner, 'getListTreeData'],
                 ],
                 "params" => [$this->owner, "parent_id"]

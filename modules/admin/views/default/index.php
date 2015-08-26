@@ -12,4 +12,13 @@ $this->title = 'My Yii Application';
         <? //var_dump(Yii::$app->translate->text('Hi everybody! My Dear friends! Go home')); ?>
     </pre>
 
+    карта
+    <input type="text" id="suggest"/>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU&load=SuggestView&onload=onLoad"></script>
+    <script>
+        function onLoad (ymaps) {
+            var suggestView = new ymaps.SuggestView('suggest');
+        }
+    </script>
+
 </div>

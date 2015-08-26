@@ -156,7 +156,16 @@ class FormplayMeta extends MetaFields
                 "params" => [$this->owner, "text3"]
             ],
 
-
+            "text6" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\YaMapField::className(),
+                    "title" => 'YaMapField',
+                    "showInGrid" => false,
+                    "isRequired" => false,
+                    "tab" => self::TEXT_TAB,
+                ],
+                "params" => [$this->owner, "text6"]
+            ],
 
 
             "text7" => [

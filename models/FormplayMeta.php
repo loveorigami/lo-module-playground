@@ -162,7 +162,7 @@ class FormplayMeta extends MetaFields
                     "title" => 'YaMapField',
                     "showInGrid" => false,
                     "isRequired" => false,
-                    "tab" => self::TEXT_TAB,
+                    //"tab" => self::TEXT_TAB,
                 ],
                 "params" => [$this->owner, "text6"]
             ],

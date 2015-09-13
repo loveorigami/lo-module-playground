@@ -1,6 +1,6 @@
 <?php
-use lo\core\admin\widgets\CrudLinks;
-use lo\core\admin\widgets\Detail;
+use lo\core\widgets\admin\CrudLinks;
+use lo\core\widgets\admin\Detail;
 use yii\helpers\Html;
 
 /**

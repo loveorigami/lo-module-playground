@@ -3,7 +3,7 @@
  * @var yii\web\View $this
  */
 
-use lo\core\admin\widgets\Grid;
+use lo\core\widgets\admin\Grid;
 
 /**
  * @var yii\web\View $this

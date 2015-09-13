@@ -1,5 +1,5 @@
 <?php
-use lo\core\admin\widgets\CrudLinks;
+use lo\core\widgets\admin\CrudLinks;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\Breadcrumbs;

@@ -143,14 +143,16 @@ class FormplayMeta extends MetaFields
                         'class'=>'lo\core\inputs\HtmlInput',
                         "fileManagerController"=>['elfinder', 'path' => 'page'],
                     ],
+                    "inputClassOptions" => [
+                        "widgetOptions"=>[
+                            'editorOptions'=>[
+                                //'preset' => 'basic',
+                            ]
+                        ],
+                    ],
                     "title" => 'HtmlField',
                     "showInGrid" => false,
                     "isRequired" => false,
-                    "widgetOptions"=>[
-                        'editorOptions'=>[
-                            'preset' => 'basic',
-                        ]
-                    ],
                     "tab" => self::TEXT_TAB,
                 ],
                 "params" => [$this->owner, "text3"]
@@ -175,14 +177,16 @@ class FormplayMeta extends MetaFields
                         'class'=>'lo\core\inputs\HtmlInput',
                         "fileManagerController"=>['elfinder', 'path' => 'page'],
                     ],
+                    "inputClassOptions" => [
+                        "widgetOptions"=>[
+                            'editorOptions'=>[
+                                'preset' => 'standard',
+                            ]
+                        ],
+                    ],
                     "title" => 'HtmlField',
                     "showInGrid" => false,
                     "isRequired" => false,
-                    "widgetOptions"=>[
-                        'editorOptions'=>[
-                            'preset' => 'standard',
-                        ]
-                    ],
                     "tab" => self::CONFIG_TAB,
                 ],
                 "params" => [$this->owner, "text7"]

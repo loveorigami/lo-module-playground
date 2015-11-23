@@ -192,6 +192,13 @@ class FormplayMeta extends MetaFields
                 "params" => [$this->owner, "text7"]
             ],
 
+            "eav" => [
+                "definition" => [
+                    "class" => \lo\core\db\fields\EavField::className(),
+                ],
+                "params" => [$this->owner, "eav"]
+            ],
+
         ];
     }
 

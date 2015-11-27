@@ -13,7 +13,7 @@ use Yii;
 
 class Formplay extends TActiveRecord
 {
-   // use \mirocow\eav\EavTrait;
+    use \lo\modules\eav\EavTrait;
 
     public $tplDir = '@lo/modules/playground/modules/admin/views/formplay/tpl/';
     public $eav;
@@ -33,14 +33,14 @@ class Formplay extends TActiveRecord
 
     /**
      * @return \yii\db\ActiveQuery
-
+     */
     public function getEavAttributes()
     {
-        return \mirocow\eav\models\EavAttribute::find()
+        return \lo\modules\eav\models\EavAttribute::find()
             ->joinWith('entity')
             ->where([
                 'categoryId' => 0, // можно привязать к разной категории
                 'entityModel' => $this::className()
             ]);
-    }*/
+    }
 }

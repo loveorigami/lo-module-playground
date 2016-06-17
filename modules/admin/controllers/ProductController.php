@@ -23,7 +23,7 @@ class ProductController extends Controller
         $beh = parent::behaviors();
 
         $beh['verbs'] = [
-            'class' => VerbFilter::className(),
+            'class' => VerbFilter::class,
             'actions' => [
                 'delete' => ['post'],
                 'groupdelete' => ['post'],

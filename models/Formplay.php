@@ -28,7 +28,7 @@ class Formplay extends TActiveRecord
      */
     public function metaClass()
     {
-        return FormplayMeta::className();
+        return FormplayMeta::class;
     }
 
     /**
@@ -40,7 +40,7 @@ class Formplay extends TActiveRecord
             ->joinWith('entity')
             ->where([
                 'categoryId' => 0, // можно привязать к разной категории
-                'entityModel' => $this::className()
+                'entityModel' => $this::class
             ]);
     }
 }

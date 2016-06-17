@@ -40,7 +40,7 @@ class FormplayMeta extends MetaFields
         return [
             "parent_id" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\ParentListField::className(),
+                    "class" => \lo\core\db\fields\ParentListField::class,
                     "title" => Yii::t('core', 'Parent'),
                     "data" => [$this->owner, 'getListTreeData'],
                 ],
@@ -61,7 +61,7 @@ class FormplayMeta extends MetaFields
             ],
             "name" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => Yii::t('common', 'Name'),
                     "showInGrid" => true,
                     "showInFilter" => true,
@@ -72,7 +72,7 @@ class FormplayMeta extends MetaFields
             ],
             "slug" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => Yii::t('common', 'Slug'),
                     "isRequired" => true,
                     "showInGrid" => true,
@@ -81,7 +81,7 @@ class FormplayMeta extends MetaFields
             ],
             "icon" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => Yii::t('common', 'Icon'),
                     "showInGrid" => true,
                     "showInFilter" => true,
@@ -93,7 +93,7 @@ class FormplayMeta extends MetaFields
 
             "onmain" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\CheckBoxField::className(),
+                    "class" => \lo\core\db\fields\CheckBoxField::class,
                     "title" => Yii::t('common', 'Onmain'),
                     "showInGrid" => true,
                     "showInFilter" => true,
@@ -105,7 +105,7 @@ class FormplayMeta extends MetaFields
 
             "title" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => Yii::t('common', 'title'),
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -116,7 +116,7 @@ class FormplayMeta extends MetaFields
 
             "text1" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextField::className(),
+                    "class" => \lo\core\db\fields\TextField::class,
                     "title" => 'TextField',
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -127,7 +127,7 @@ class FormplayMeta extends MetaFields
 
             "text2" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\TextAreaField::className(),
+                    "class" => \lo\core\db\fields\TextAreaField::class,
                     "title" => 'TextAreaField',
                     "showInGrid" => false,
                     "isRequired" => false,
@@ -138,7 +138,7 @@ class FormplayMeta extends MetaFields
 
             "text3" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\HtmlField::className(),
+                    "class" => \lo\core\db\fields\HtmlField::class,
                     "inputClass" =>[
                         'class'=>'lo\core\inputs\HtmlInput',
                         "fileManagerController"=>['elfinder', 'path' => 'page'],
@@ -160,7 +160,7 @@ class FormplayMeta extends MetaFields
 
             "text6" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\YaMapField::className(),
+                    "class" => \lo\core\db\fields\YaMapField::class,
                     "title" => 'YaMapField',
                     "showInGrid" => false,
                     "isRequired" => true,
@@ -172,7 +172,7 @@ class FormplayMeta extends MetaFields
 
             "text7" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\HtmlField::className(),
+                    "class" => \lo\core\db\fields\HtmlField::class,
                     "inputClass" =>[
                         'class'=>'lo\core\inputs\HtmlInput',
                         "fileManagerController"=>['elfinder', 'path' => 'page'],
@@ -194,7 +194,7 @@ class FormplayMeta extends MetaFields
 
             "eav" => [
                 "definition" => [
-                    "class" => \lo\core\db\fields\EavField::className(),
+                    "class" => \lo\core\db\fields\EavField::class,
                 ],
                 "params" => [$this->owner, "eav"]
             ],
